@@ -11,8 +11,15 @@ public class MyMain {
     //    int[] arr2 = {2, 4, 6};
     //    int[] arr3 = addArrays3(arr1, arr2); // arr3 = [3, 7, 11]
     public static int[] addArrays3(int[] arr1, int[] arr2) {
-        // REPLACE THIS WITH YOUR CODE
-        return null;
+        int[] newarr = new int[3];
+        int num1 = arr1[0] + arr2[0];
+        int num2 = arr1[1] + arr2[1];
+        int num3 = arr1[2] + arr2[2];
+        newarr[0] = num1;
+        newarr[1] = num2;
+        newarr[2] = num3;
+        return newarr;
+
     }
 
     // Arrays Basics Problem 2:
@@ -23,8 +30,13 @@ public class MyMain {
     // int[] arr1 = {1, 3, 5};
     // double[] arr2 = average3(arr1); // arr2 = [3.0, 3.0, 3.0]
     public static double[] average3(int[] arr) {
-        // REPLACE THIS WITH YOUR CODE
-        return null;
+        double[] newarr = new double[3];
+        double sum = (double) arr[0] + arr[1] + arr[2];
+        double avg = sum/3.0;
+        for (int i = 0; i<arr.length; i++){
+            newarr[i]+=avg;
+        }
+        return newarr;
     }
 
     // Iteration Problem 1:
@@ -34,19 +46,30 @@ public class MyMain {
     // int[] nums = {1, 6, 2, 6, 8, 2, 3, 9, 3};
     // int x = sum(nums); // x = 40
     public static int sum(int[] arr) {
-        // REPLACE THIS WITH YOUR CODE
-        return -1;
+        int sum = 0;
+        for(int i = 0; i<arr.length; i++){
+            sum+=arr[i];
+        }
+        return sum;
     }
 
     // Iteration Problem 2:
     // Next, write a method max() that takes an int array of any size as input,
     // and outputs the largest number in the array
     // Example:
-    // int[] nums = {1, 6, 2, 6, 8, 2, 3, 9, 3};
+    // int[] nums = {1, 6, 2, 9, 8, 2, 3, 6, 3};
     // int x = max(nums); // x = 9
     public static int max(int[] arr) {
-        // REPLACE THIS WITH YOUR CODE
-        return -1;
+        int maxnum = Integer.MIN_VALUE;
+        for(int i = 0; i<arr.length; i++){
+           if (arr[i]> maxnum){
+               maxnum=arr[i];
+           }
+           else{
+               maxnum=maxnum;
+           }
+        }
+        return maxnum;
     }
 
     // Challenge Problem:
